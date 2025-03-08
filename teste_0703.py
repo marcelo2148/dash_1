@@ -21,6 +21,10 @@ app.layout = html.Div(children=[
     dcc.Graph(id='grafico', figure=fig)
 ])
 
-# Executando o servidor
+# Este é o servidor Flask que o Gunicorn precisa
+server = app.server
+
+# Executando o servidor (em modo desenvolvimento)
 if __name__ == '__main__':
     app.run_server(debug=True)
+
