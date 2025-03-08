@@ -8,8 +8,8 @@ app = dash.Dash(__name__)
 
 # Dados fictícios
 df = pd.DataFrame({
-    "Categoria": ["A", "B", "C", "D"],
-    "Valor": [10, 20, 30, 40]
+    "Categoria": ["Sonic", "Mario", "Ursinhos", "Dinossauros"],
+    "Valor": [1, 10, 3, 6]
 })
 
 # Criando um gráfico com Plotly
@@ -17,7 +17,7 @@ fig = px.bar(df, x="Categoria", y="Valor", title="Gráfico de Barras")
 
 # Layout do app
 app.layout = html.Div(children=[
-    html.H1("Dashboard Simples"),
+    html.H1("Quantidade de brinquedos do Rafa"),
     dcc.Graph(id='grafico', figure=fig)
 ])
 
